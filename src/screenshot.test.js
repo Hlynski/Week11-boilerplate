@@ -20,13 +20,13 @@ describe("Google screenshots", () => {
     await page.emulate(iPhonex);
     await page.goto(url);
     // Grab a screenshot and save it as "iPhoneX-screenshot.png"
-    NotImplementedError();
+    await page.screenshot({path: 'screenshot.png'});
   });
 
   test("Save a desktop screenshot", async () => {
     await page.setViewport({ width: 1440, height: 800 });
     await page.goto(url);
     // Grab a screenshot and save it as "desktop-screenshot.png"
-    NotImplementedError();
+    await page.screenshot({path: 'desktop-screenshot.png'});
   });
 });
